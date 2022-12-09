@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.elementToFade!.nativeElement.classList.remove('fade-in');
     this.elementToFade!.nativeElement.classList.add('fade-out');
     
+    
   }
 
 }
