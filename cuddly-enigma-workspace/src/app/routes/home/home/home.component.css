@@ -1,0 +1,157 @@
+body {
+    margin: 50px 0;
+    padding: 0;
+    font-size: 0;
+    font-family: 'Nova Flat';
+    background: #190a25;
+    color: white;
+    text-align: center;
+}
+body h1 {
+    display: block;
+    height: 25px;
+    font-size: 12px;
+}
+body > div {
+    display: inline-block;
+    width: 25%;
+    min-width: 500px;
+    margin-bottom: 50px;
+}
+body > div > div {
+    margin: 0 auto;
+}
+@keyframes plasma {
+    0% {
+        transform: scale(6) translate3d(20px, 0, 0);
+   }
+    50% {
+        transform: scale(1) translate3d(-60px, 0, 0);
+   }
+    100% {
+        transform: scale(6) translate3d(20px, 0, 0);
+   }
+}
+.plasma {
+    backface-visibility: hidden;
+    z-index: 20;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    padding: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.plasma .gooey-container {
+    filter: url(#gooey-plasma);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0 0 20px #ff4081 inset;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.plasma .gooey-container .bubble {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: right;
+}
+.plasma .gooey-container .bubble:before {
+    content: "";
+    display: inline-block;
+    background: #ff4081;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: scale(6) translate3d(20px, 0, 0);
+    box-shadow: 0 0 15px 0 #00f inset, 0 0 10px 0 #00f inset;
+}
+.plasma .gooey-container .bubble:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+.plasma .gooey-container .bubble:nth-child(1):before {
+    animation: plasma 3.5s linear 0.25s infinite;
+}
+.plasma .gooey-container .bubble:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+.plasma .gooey-container .bubble:nth-child(2):before {
+    animation: plasma 4s linear 0.5s infinite;
+}
+.plasma .gooey-container .bubble:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+.plasma .gooey-container .bubble:nth-child(3):before {
+    animation: plasma 4.5s linear 0.75s infinite;
+}
+.plasma .gooey-container .bubble:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(240deg);
+}
+.plasma .gooey-container .bubble:nth-child(4):before {
+    animation: plasma 5s linear 1s infinite;
+}
+.plasma .gooey-container .bubble:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(300deg);
+}
+.plasma .gooey-container .bubble:nth-child(5):before {
+    animation: plasma 5.5s linear 1.25s infinite;
+}
+.plasma .gooey-container .bubble:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(360deg);
+}
+.plasma .gooey-container .bubble:nth-child(6):before {
+    animation: plasma 6s linear 1.5s infinite;
+}
+
+
+/* #element{
+    -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;
+    color: white;
+}
+
+@-webkit-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  @keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+  } */
+
+.fade-out {
+	animation: fadeOut 2s;
+  	opacity: 0;
+}
+
+@keyframes fadeOut {
+  from {
+  	opacity: 1;
+  }
+  to {
+ 	opacity: 0;
+  }
+}
+
+.fade-in {
+	animation: fadeIn 2.5s;
+  	opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+  	opacity: 0;
+  }
+  to {
+ 	opacity: 1;
+  }
+}
