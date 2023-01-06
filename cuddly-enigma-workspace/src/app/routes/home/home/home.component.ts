@@ -6,6 +6,7 @@ import { Component, OnInit, ElementRef, AfterViewInit, ViewChild } from '@angula
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+  @ViewChild('titleToFade') titleToFade: ElementRef | undefined;
   @ViewChild('elementToFade') elementToFade: ElementRef | undefined;
   showSpinner = true;
   constructor(private el: ElementRef) { }
@@ -18,10 +19,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   async ngAfterViewInit() {
-    this.elementToFade!.nativeElement.classList.add('fade-in');
-    await this.delay (5000); //only show spinner for 10 seconds
-    this.elementToFade!.nativeElement.classList.remove('fade-in');
-    this.elementToFade!.nativeElement.classList.add('fade-out');
+
+    while (true){
+      this.elementToFade!.nativeElement.classList.add('fade-in');
+      this.titleToFade!.nativeElement.classList.add('fade-in');
+      await this.delay (2500); //only show spinner for 10 seconds
+      this.titleToFade!.nativeElement.classList.remove('fade-in');
+      this.elementToFade!.nativeElement.classList.remove('fade-in');
+      this.titleToFade!.nativeElement.classList.add('fade-out');
+      this.elementToFade!.nativeElement.classList.add('fade-out');
+      await this.delay (2500);
+    }
+    
     
     
   }

@@ -129,7 +129,7 @@ body > div > div {
   } */
 
 .fade-out {
-	animation: fadeOut 2s;
+	animation: fadeOut 2.5s;
   	opacity: 0;
 }
 
@@ -143,7 +143,7 @@ body > div > div {
 }
 
 .fade-in {
-	animation: fadeIn 2.5s;
+	animation: fadeIn 3s;
   	opacity: 1;
 }
 
@@ -154,4 +154,11 @@ body > div > div {
   to {
  	opacity: 1;
   }
+}
+
+.title{
+    text-align: center;
+    color: white;
+    margin-bottom: 5%;
+    font-family: 'Lofi' !important;
 }

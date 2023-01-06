@@ -5,9 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { MaterialsModule } from 'src/app/materials/materials.module';
 import { MeComponent } from './me/me.component';
 
-const routes: Routes = [ {
-  path: '', component: HomeComponent
-}];
+const routes: Routes = [ 
+  { path: '', redirectTo: 'loading', pathMatch: 'full' },
+  {path: 'loading', component: HomeComponent},
+  {path: 'me', component: MeComponent}
+];
 
 @NgModule({
   declarations: [
