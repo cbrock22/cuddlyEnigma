@@ -6,8 +6,8 @@ import { MaterialsModule } from 'src/app/materials/materials.module';
 import { MeComponent } from './me/me.component';
 
 const routes: Routes = [ 
-  { path: '', redirectTo: 'loading', pathMatch: 'full' },
-  {path: 'loading', component: HomeComponent},
+  { path: '', redirectTo: 'developing', pathMatch: 'full' },
+  {path: 'developing', component: HomeComponent},
   {path: 'me', component: MeComponent}
 ];
 
