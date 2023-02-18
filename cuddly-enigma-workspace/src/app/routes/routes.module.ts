@@ -5,7 +5,8 @@ import { HomeComponent } from './home/home/home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) }
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+  { path: 'photography', loadChildren: () => import('./photography/photography.module').then(m => m.PhotographyModule) },
 ];
 
 @NgModule({
