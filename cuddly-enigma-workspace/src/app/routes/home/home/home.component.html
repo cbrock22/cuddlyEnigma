@@ -5,6 +5,10 @@
             Currently Developing ...
         </h1>
     </div>
+
+    <div>
+        <button mat-raised-button (click)="routeToPhotos()" style="background-color: aliceblue;">Route to Photos</button>
+    </div>
     
     <div #elementToFade style="display: flex; justify-content: center;" *ngIf="showSpinner">
         <svg width="0" height="0">
@@ -25,6 +29,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 <!-- <div id=element>som content</div> -->

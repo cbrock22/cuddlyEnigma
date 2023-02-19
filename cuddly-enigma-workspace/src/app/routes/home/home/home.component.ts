@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('titleToFade') titleToFade: ElementRef | undefined;
   @ViewChild('elementToFade') elementToFade: ElementRef | undefined;
   showSpinner = true;
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +20,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   async ngAfterViewInit() {
+
+    this.el.nativeElement.ownerDocument.body.style.backgroundColor = 'black';
 
     while (true){
       this.elementToFade!.nativeElement.classList.add('fade-in');
@@ -33,6 +36,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
     
     
     
+  }
+
+  routeToPhotos(){
+    console.log('routing');
+    this.router.navigate(['/photography/gallery']);
+
   }
 
 }
