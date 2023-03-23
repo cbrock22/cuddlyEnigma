@@ -1,1 +1,51 @@
-<p>gallery works!</p>
+<div>
+  <div>
+    <mat-toolbar class="mat-toolbar-slide" style="background-color: #1e3d59">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Photo Gallery</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button>
+      </mat-toolbar>
+</div>
+
+
+  <div class="content" style="box-sizing: content-box; object-fit: cover;">
+    <div fxLayout="row wrap" fxLayoutGap="10px" >
+        
+            <mat-card fxFlex="33" style="background-color: white;" *ngFor="let image of imageURLArray">
+                <!-- <mat-card-header>
+                    <mat-card-title>Card Title</mat-card-title>
+                    <mat-card-subtitle>Card Subtitle</mat-card-subtitle>
+                </mat-card-header> -->
+                <mat-card-content style="text-align: -webkit-center;">
+                    <!-- <img ng-src="{{s3Url}}{{image.Key}}" ng-repeat="image in allImageData"> -->
+                    <img class="image-container" src="{{image}}">
+                </mat-card-content>
+            </mat-card>
+        
+        
+      </div>
+  </div>
+  
+<div>
+  <div class="floating-image row">
+    <div class="column" *ngFor="let image of imageURLArray">
+      <img class="image-container" src="{{image}}">
+    </div>
+  </div>
+</div>
+
+<div>
+  <h1 style="color: black; font-size: 50px; text-align: center">Went on a bike ride will be back shortly</h1>
+</div>
+  
+</div>
+
+  

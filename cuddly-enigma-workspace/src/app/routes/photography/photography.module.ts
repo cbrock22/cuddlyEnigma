@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GalleryComponent } from './gallery/gallery.component';
 import { Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { MaterialsModule } from 'src/app/materials/materials.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const routes: Routes = [
   { path: '', redirectTo: 'gallery', pathMatch: 'full' },
@@ -14,7 +17,11 @@ const routes: Routes = [
     GalleryComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FlexLayoutModule,
+    MaterialsModule,
+    RouterModule.forChild(routes),
+  ],
+  
 })
 export class PhotographyModule { }
