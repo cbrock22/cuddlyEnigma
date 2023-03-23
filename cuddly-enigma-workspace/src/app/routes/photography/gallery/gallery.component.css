@@ -19,3 +19,24 @@
 mat-card{
   margin-top: 15px;
 }
+
+.image-container{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.floating-image{
+  object-fit: cover;
+
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33%;
+  padding: 5px;
+}

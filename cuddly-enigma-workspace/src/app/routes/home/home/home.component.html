@@ -2,15 +2,15 @@
 <div style="transform: translateY(50%)">
     <div #titleToFade class="title lofi-text">
         <h1 >
-            Currently Developing ...
+            Excuse the appearance ...
         </h1>
     </div>
 
-    <div>
+    <!-- <div>
         <button mat-raised-button (click)="routeToPhotos()" style="background-color: aliceblue;">Route to Photos</button>
-    </div>
+    </div> -->
     
-    <div #elementToFade style="display: flex; justify-content: center;" *ngIf="showSpinner">
+    <div #elementToFade style="display: flex; justify-content: center;">
         <svg width="0" height="0">
             <filter id="gooey-plasma">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
@@ -27,6 +27,11 @@
             <span class="bubble"></span>
             </div>
         </div>
+    </div>
+    <div #title2ToFade class="title lofi-text">
+        <h1 >
+            Development is underway
+        </h1>
     </div>
 </div>
 
