@@ -23,6 +23,7 @@
     "@angular/router": "^15.0.3",
     "ajv-keywords": "^5.1.0",
     "aws-sdk": "^2.1318.0",
+    "bootstrap": "^5.2.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
